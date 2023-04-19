@@ -69,9 +69,10 @@ export class handler extends Component {
     this.lastTilePosition = this.plane[this.plane.length - 1].getPosition();
     let collider = this.cone.getComponent(CapsuleCollider);
     console.log("Collider", collider);
-    collider.on("onCollisionEnter", this.collide, this);
+    collider.on("onTriggerEnter", this.collide, this);
   }
   collide() {
+    game.pause();
     console.log("INTERSECT");
   }
   /**
