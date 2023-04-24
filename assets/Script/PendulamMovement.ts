@@ -4,10 +4,13 @@ const { ccclass, property } = _decorator;
 @ccclass("PendulamMovement")
 export class PendulamMovement extends Component {
   speedDep: number = 45;
-  start() {}
+  rotate: number;
+  start() {
+    this.rotate = Math.random() < 0.5 ? -1 : 1;
+  }
 
   update(deltaTime: number) {
-    var axis_z = new Vec3(0, 0, 1);
+    var axis_z = new Vec3(0, 0, this.rotate);
     let tempQuat_z = new Quat();
     Quat.fromAxisAngle(
       tempQuat_z,

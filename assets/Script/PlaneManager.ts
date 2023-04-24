@@ -24,8 +24,8 @@ export class PlaneManager extends Component {
       planeindex++
     ) {
       let Plane = instantiate(this.PlanePrefabArray[planeindex]);
-      let width = Plane.getComponent(BoxCollider).size.z;
-
+      //let width = Plane.getComponent(BoxCollider).size.z;
+      let width = 10;
       Plane.setPosition(
         new Vec3(
           this.FirstPlanePosition.x,

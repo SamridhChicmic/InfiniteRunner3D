@@ -24,14 +24,14 @@
     "_active": true,
     "_components": [
       {
-        "__id__": 9
+        "__id__": 11
       },
       {
-        "__id__": 12
+        "__id__": 14
       }
     ],
     "_prefab": {
-      "__id__": 14
+      "__id__": 16
     },
     "_lpos": {
       "__type__": "cc.Vec3",
@@ -77,15 +77,18 @@
       },
       {
         "__id__": 6
+      },
+      {
+        "__id__": 8
       }
     ],
     "_prefab": {
-      "__id__": 8
+      "__id__": 10
     },
     "_lpos": {
       "__type__": "cc.Vec3",
-      "x": 0,
-      "y": 3.038,
+      "x": 0.009,
+      "y": 2.69,
       "z": 0
     },
     "_lrot": {
@@ -98,7 +101,7 @@
     "_lscale": {
       "__type__": "cc.Vec3",
       "x": 0.7,
-      "y": 3,
+      "y": 6,
       "z": 1
     },
     "_mobility": 0,
@@ -186,6 +189,37 @@
     "fileId": "a2vq5gTLBJlo5oz3nRV401"
   },
   {
+    "__type__": "cc.BoxCollider",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 2
+    },
+    "_enabled": true,
+    "__prefab": {
+      "__id__": 9
+    },
+    "_material": null,
+    "_isTrigger": true,
+    "_center": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_size": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_id": ""
+  },
+  {
+    "__type__": "cc.CompPrefabInfo",
+    "fileId": "46RN02HtRDLZfWRwz28gJ2"
+  },
+  {
     "__type__": "cc.PrefabInfo",
     "root": {
       "__id__": 1
@@ -207,7 +241,7 @@
     },
     "_enabled": true,
     "__prefab": {
-      "__id__": 10
+      "__id__": 12
     },
     "_materials": [
       {
@@ -217,7 +251,7 @@
     ],
     "_visFlags": 0,
     "bakeSettings": {
-      "__id__": 11
+      "__id__": 13
     },
     "_mesh": {
       "__uuid__": "1263d74c-8167-4928-91a6-4e2672411f47@2e76e",
@@ -262,9 +296,9 @@
     "node": {
       "__id__": 1
     },
-    "_enabled": true,
+    "_enabled": false,
     "__prefab": {
-      "__id__": 13
+      "__id__": 15
     },
     "_material": null,
     "_isTrigger": false,
