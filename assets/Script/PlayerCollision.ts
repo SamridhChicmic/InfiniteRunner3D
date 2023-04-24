@@ -10,9 +10,9 @@ export class PlayerCollision extends Component {
     console.log("Collider", collider);
     collider.on("onTriggerEnter", this.collide, this);
   }
-  collide(ITriggerEvent) {
+  collide(TriggerEvent) {
     // game.pause();
-    console.log("INTERSECT", ITriggerEvent);
+    console.log("INTERSECT", TriggerEvent);
   }
   update(deltaTime: number) {}
 }
