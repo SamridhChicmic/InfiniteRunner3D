@@ -6,6 +6,7 @@ import {
   Vec3,
   instantiate,
   BoxCollider,
+  RigidBody,
 } from "cc";
 const { ccclass, property } = _decorator;
 
@@ -26,6 +27,7 @@ export class PlaneManager extends Component {
       let Plane = instantiate(this.PlanePrefabArray[planeindex]);
       //let width = Plane.getComponent(BoxCollider).size.z;
       let width = 10;
+      console.log("RIGID BODY", Plane.getComponent(RigidBody).name);
       Plane.setPosition(
         new Vec3(
           this.FirstPlanePosition.x,
@@ -37,6 +39,9 @@ export class PlaneManager extends Component {
       this.PlaneParent.addChild(Plane);
       this.LastPosition = Plane.getPosition();
     }
+    this.schedule(() => {
+      this.planeMovement();
+    }, 0);
   }
   planeMovement() {
     this.PlaneParent.children.forEach((Child) => {
@@ -62,7 +67,5 @@ export class PlaneManager extends Component {
     });
   }
 
-  update(deltaTime: number) {
-    this.planeMovement();
-  }
+  update(deltaTime: number) {}
 }

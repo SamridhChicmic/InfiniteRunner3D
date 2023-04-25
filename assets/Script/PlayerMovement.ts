@@ -11,6 +11,7 @@ import {
   MeshRenderer,
   BoxCollider,
   tween,
+  RigidBody,
 } from "cc";
 const { ccclass, property } = _decorator;
 
@@ -89,9 +90,7 @@ export class PlayerMovement extends Component {
         .to(0.5, {
           position: currentPosition,
         })
-        .to(0.5, {
-          position: CharacterParmanentPosition,
-        })
+
         .call(() => {
           this.CharacterJump = false;
         })

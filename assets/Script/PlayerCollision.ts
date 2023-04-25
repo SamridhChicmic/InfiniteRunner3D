@@ -7,12 +7,11 @@ export class PlayerCollision extends Component {
   Charachter: Node = null;
   start() {
     let collider = this.Charachter.getComponent(CapsuleCollider);
-    console.log("Collider", collider);
-    collider.on("onTriggerEnter", this.collide, this);
+    collider.on("onCollisionStay", this.collide, this);
   }
-  collide(TriggerEvent) {
+  collide(event) {
     // game.pause();
-    console.log("INTERSECT", TriggerEvent);
+    console.log("INTERSECT", event);
   }
   update(deltaTime: number) {}
 }
